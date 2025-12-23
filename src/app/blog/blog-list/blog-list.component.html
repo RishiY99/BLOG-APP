@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Blog List</h1>
+
+  <button (click)="addNewBlog()">Add New Blog</button>
+
+  <div class="blog-list">
+    <div class="blog-card" *ngFor="let blog of blogs">
+      <h2>{{ blog.title }}</h2>
+      <p class="author">By {{ blog.author }}</p>
+      <p class="date">{{ blog.createdAt }}</p>
+      <p class="preview">{{ blog.content.substring(0, 100) }}...</p>
+      
+      <div class="buttons">
+        <button (click)="viewBlog(blog.id)">View</button>
+        <button (click)="deleteBlog(blog.id)">Delete</button>
+      </div>
+    </div>
+
+    <p *ngIf="blogs.length === 0">No blogs available. Add your first blog!</p>
+  </div>
+</div>

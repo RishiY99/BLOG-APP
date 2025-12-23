@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Add New Blog</h1>
+
+    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" formControlName="title">
+            <p class="error" *ngIf="blogForm.get('title')?.invalid && blogForm.get('title')?.touched">
+                Title is required
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" formControlName="author">
+            <p class="error" *ngIf="blogForm.get('author')?.invalid && blogForm.get('author')?.touched">
+                Author is required
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" formControlName="content" rows="10"></textarea>
+            <p class="error" *ngIf="blogForm.get('content')?.invalid && blogForm.get('content')?.touched">
+                Content is required
+            </p>
+        </div>
+
+        <button type="submit" [disabled]="blogForm.invalid">Submit</button>
+    </form>
+</div>

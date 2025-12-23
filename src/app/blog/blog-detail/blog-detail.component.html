@@ -1,0 +1,18 @@
+<div class="container" *ngIf="blog">
+    <h1>{{ blog.title }}</h1>
+
+    <div class="meta">
+        <p class="author">By {{ blog.author }}</p>
+        <p class="date">{{ blog.createdAt }}</p>
+    </div>
+
+    <div class="content">
+        <p>{{ blog.content }}</p>
+    </div>
+
+    <button (click)="goBack()">Back to Blog List</button>
+</div>
+
+<div class="container" *ngIf="!blog">
+    <p>Loading...</p>
+</div>

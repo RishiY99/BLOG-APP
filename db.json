@@ -1,0 +1,32 @@
+{
+  "blogs": [
+    {
+      "id": 2,
+      "title": "Understanding TypeScript",
+      "author": "Jane Smith",
+      "content": "TypeScript is a superset of JavaScript that adds static typing to the language. It helps catch errors early in development and makes code more maintainable. Learn how TypeScript can improve your Angular development workflow.",
+      "createdAt": "2025-12-21"
+    },
+    {
+      "id": 3,
+      "title": "Angular Components Explained",
+      "author": "Mike Johnson",
+      "content": "Components are the building blocks of Angular applications. Every component has a TypeScript class, HTML template, and CSS styles. Understanding components is essential for building effective Angular applications.",
+      "createdAt": "2025-12-22"
+    },
+    {
+      "id": 1766492804755,
+      "title": "Test Blog Post",
+      "author": "Test Author",
+      "content": "This is a test blog post created to verify the functionality of the blog application.",
+      "createdAt": "2025-12-23"
+    },
+    {
+      "id": 1766492902547,
+      "title": "ok",
+      "author": "ok",
+      "content": "ok",
+      "createdAt": "2025-12-23"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.meta {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.author {
+    color: #666;
+    margin: 4px 0;
+}
+
+.date {
+    color: #999;
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.content {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.content p {
+    color: #333;
+    margin: 12px 0;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
