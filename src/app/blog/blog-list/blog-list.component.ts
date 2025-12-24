@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
@@ -14,16 +14,18 @@ import { Blog } from '../../models/blog.model';
 export class BlogListComponent implements OnInit {
     blogs: Blog[] = [];
 
-    constructor(private blogService: BlogService, private router: Router) { }
+    constructor(private blogService: BlogService, private router: Router, private crf: ChangeDetectorRef) { }
 
     ngOnInit(): void {
         this.loadBlogs();
+
     }
 
     loadBlogs(): void {
         this.blogService.getAllBlogs().subscribe(
             (data) => {
                 this.blogs = data;
+                this.crf.detectChanges();
             }
         );
     }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
@@ -17,7 +17,8 @@ export class BlogDetailComponent implements OnInit {
     constructor(
         private blogService: BlogService,
         private route: ActivatedRoute,
-        private router: Router
+        private router: Router,
+        private crf: ChangeDetectorRef
     ) { }
 
     ngOnInit(): void {
@@ -29,8 +30,10 @@ export class BlogDetailComponent implements OnInit {
         this.blogService.getBlogById(id).subscribe(
             (data) => {
                 this.blog = data;
+                this.crf.detectChanges();
             }
         );
+
     }
 
     goBack(): void {
